@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ApplicationRef} from '@angular/core';
 declare let window: any;
 
 @Component({
@@ -8,11 +8,10 @@ declare let window: any;
       <div class="container">
         <router-outlet></router-outlet>
       </div>
-      <footer></footer>
       `,
 })
 export class AppComponent {
-  constructor() {
+  constructor(private appref:ApplicationRef) {
     window.app = this;
   }
 }

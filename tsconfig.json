@@ -1,14 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
+    "target": "es5",
+    "module": "es2015",
     "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": false,
-    "suppressImplicitAnyIndexErrors": true,
     "lib": [
       "es5",
       "es2015",
@@ -17,11 +16,11 @@
       "scripthost"
     ]
   },
+  "include": [
+    "app"
+  ],
   "exclude": [
     "node_modules"
-  ],
-  "types": [
-     "node"
   ],
   "typeRoots": [
     "node_modules/@types"

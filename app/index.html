@@ -15,5 +15,24 @@
     </app>
   </body>
   <script src="dist/vendor.bundle.js"></script>
+  <script src="dist/openapi.bundle.js"></script>
+  <script>
+window.config = {
+  oauth: {},
+  github: {},
+  codegen: {
+    disabled: true,
+    languages: [],
+    templates: {},
+    setupTemplates: {},
+  },
+  routes: {
+    '/': {redirect: '/', meta: {}, openapi: 'default'},
+  },
+  workflows: {},
+  uiOptions: {},
+  env: {},
+}
+  </script>
   <script src="dist/app.bundle.js"></script>
 </html>

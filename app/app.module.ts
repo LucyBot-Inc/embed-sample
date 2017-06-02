@@ -11,15 +11,18 @@ import { HomeComponent }       from './components/home';
 import { NavbarComponent }       from './components/navbar';
 import { FooterComponent }       from './components/footer';
 
+import * as LucyBot from 'lucybot/app/embed.module';
+
 @NgModule({
   imports: [
     HttpModule,
     FormsModule,
     BrowserModule,
+    LucyBot.EmbedModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [
-    {provide: APP_BASE_HREF, useValue: '/'}
+    {provide: APP_BASE_HREF, useValue: '/'},
   ],
   declarations: [
     AppComponent,

@@ -1,0 +1,11 @@
+{
+  "name": "lucybot-embed",
+  "version": "1.0.0",
+  "description": "A sample project for embedding LucyBot components in an existing website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}

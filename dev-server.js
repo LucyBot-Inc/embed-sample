@@ -14,5 +14,5 @@ var server = new WebpackDevServer(compiler, {
   stats: { colors: true },
   disableHostCheck: true,
 });
-server.listen(3000, "0.0.0.0", function() {
+server.listen(3008, "0.0.0.0", function() {
 });

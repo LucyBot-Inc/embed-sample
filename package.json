@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "express": "^4.14.0",
-    "lucybot": "github:LucyBot-Inc/documentation-generator",
+    "lucybot": "github:LucyBot-Inc/documentation-generator#embed",
     "prismjs-themes": "^1.0.2"
   },
   "devDependencies": {

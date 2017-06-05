@@ -14,7 +14,7 @@ declare let window:any;
       <h2>Operation Documentation Component</h2>
       <p>The Operation Documentation Component displays the input and output for a given operation</p>
       <div class="box">
-        <operation-documentation [apiCall]="openapi.getAPICall('GET /albums')"></operation-documentation>
+        <operation-documentation [apiCall]="apiCall"></operation-documentation>
       </div>
 
       <auth></auth>
@@ -29,7 +29,13 @@ declare let window:any;
             <i class="fa fa-right fa-spin fa-refresh" [hidden]="!apiCallComponent.executing"></i>
           </button>
         </h3>
-        <api-call #apiCallComponent [apiCall]="openapi.getAPICall('GET /albums')"></api-call>
+        <api-call #apiCallComponent [apiCall]="apiCall"></api-call>
+      </div>
+
+      <h2>Schema Component</h2>
+      <p>The schema component displays JSON Schema</p>
+      <div class="box">
+        <schema [schema]="apiCall.operation.responses[200].schema"></schema>
       </div>
       `,
     styles: [`
@@ -44,8 +50,11 @@ declare let window:any;
     `]
 })
 export class HomeComponent {
+  apiCall:any;
+
   constructor(private openapi:OpenAPIService) {
     window.home = this;
     this.openapi.retrieveSpec('default');
+    this.apiCall = openapi.getAPICall('GET /albums');
   }
 }

@@ -1,13 +1,6 @@
 import 'lucybot/app/vendor-common';
 
-// Polyfills
-import 'es6-shim';
-import 'zone.js/dist/zone';
-import 'reflect-metadata';
-
 // Libraries
-declare let window:any;
-window.jquery = require('jquery');
 import 'bootstrap/dist/js/bootstrap.js';
 
 // CSS

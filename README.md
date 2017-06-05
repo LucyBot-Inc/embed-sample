@@ -13,8 +13,21 @@ It is loaded by setting `window.lucybot.openapi.default` in ./app/openapi.js.
 
 You can load multiple API definitions and switch between them by calling `OpenAPIService.retrieveSpec(specName)`.
 
-### Angular Module, Components, and Pipes
-In ./app/app.module.ts, we add the line `import * as LucyBot from lucybot/app/embed.module;`,
+### Angular Module
+In ./app/app.module.ts, we import the LucyBot module so we can reference its components, directives, pipes, and services elsewhere.
+
+```typescript
+import * as LucyBot from 'lucybot/app/embed.module';
+
+@NgModule({
+  imports: [
+    LucyBot.EmbedModule,
+  ],
+})
+```
+
+
+the line `import * as LucyBot from lucybot/app/embed.module;`,
 and add `LucyBot.EmbedModule` to the `imports` array.
 
 Now you can use the `<api-call>`, `<operation-documentation>`, and `<schema>` components provided by LucyBot,

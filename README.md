@@ -26,14 +26,13 @@ import * as LucyBot from 'lucybot/app/embed.module';
 })
 ```
 
-
-the line `import * as LucyBot from lucybot/app/embed.module;`,
-and add `LucyBot.EmbedModule` to the `imports` array.
-
-Now you can use the `<api-call>`, `<operation-documentation>`, and `<schema>` components provided by LucyBot,
-as well as the `OpenAPIService`.
-
 ## Usage
+The main components are:
+* `<api-call>` - an API console component
+* `<auth>` - A modal for entering API Keys or starting OAuth flows. You can also use `SecretsService` to programatically pass credentials to LucyBot.
+* `<operation-documentation>` - displays parameters and responses for a given operation
+* `<schema>` - displays JSON schema, as well as an example JSON object
+
 ./app/components/home.ts contains the logic and HTML of this demo. It shows how to use each
 of the above components, as well as the `OpenAPIService`.
 

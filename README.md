@@ -1,6 +1,8 @@
 # LucyBot Embed Sample
 Learn how to embed LucyBot components in an existing website
 
+> You must have an access key for LucyBot's Documentation Generator to use this demo.
+
 ## Setup
 Most of this repository contains Angular 2 boilerplate, but there are two additional steps to get LucyBot
 components into your Angular app:

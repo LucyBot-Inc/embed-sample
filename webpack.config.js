@@ -27,6 +27,9 @@ module.exports = {
       test: /\.js$/,
       loader: 'babel-loader?presets[]=es2015',
     }, {
+      test: /\.json$/,
+      loader: 'json-loader',
+    }, {
       test: /\.pug$/,
       loader: ['raw-loader', 'pug-html-loader?doctype=html&plugins=pug-plugin-ng'],
     }, {
